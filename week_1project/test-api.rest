@@ -1,0 +1,31 @@
+### Get all students with pagination (default)
+GET http://127.0.0.1:5001/students
+
+### Get all students with a limit of 2 per page
+GET http://127.0.0.1:5001/students?limit=2
+
+### Get a specific student by ID
+GET http://127.0.0.1:5001/students/1
+
+### Create a new student
+POST http://127.0.0.1:5001/students
+Content-Type: application/json
+
+{
+    "name": "Alice Smith",
+    "email": "alice.smith@example.com",
+    "age": 25,
+    "gender": "female"
+}
+
+### Update an existing student
+PUT http://127.0.0.1:5001/students/1
+Content-Type: application/json
+
+{
+    "email": "john.updated@example.com",
+    "age": 21
+}
+
+### Delete a student
+DELETE http://127.0.0.1:5001/students/2s
